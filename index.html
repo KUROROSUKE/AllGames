@@ -22,8 +22,8 @@
       width: 45%;
     }
     .game {
-      position: relative; /* 通信量表示用の絶対位置指定の基準 */
       display: flex;
+      flex-direction: column; /* 縦並び */
       align-items: center;
       background-color: #f9f9f9;
       padding: 10px;
@@ -31,23 +31,18 @@
       margin: 10px 0;
       cursor: pointer;
     }
-    .game p {
+    .gameTitle {
       text-align: center;
       text-decoration: none;
       color: #007bff;
       font-weight: bold;
-      width: 100%;
       margin: 0;
     }
     /* 通信量表示用のスタイル */
     .traffic {
-      right: 5px;
-      bottom: 5px;
       font-size: 0.7em;
       color: #555;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 2px 4px;
-      border-radius: 3px;
+      margin-top: 5px; /* タイトルと通信量の間に余白を追加 */
     }
     /* 画面幅が540px未満の場合、コンテナを上下配置に変更 */
     @media (max-width: 540px) {
@@ -67,34 +62,34 @@
     <div class="section">
       <h2>元素ゲーム</h2>
       <div class="game" onclick='window.open("https://kurorosuke.github.io/atom_game/Actual_codes/game.html", "_blank")'>
-        <p>対CPU (アルゴリズム)</p>
+        <p class="gameTitle">対CPU (アルゴリズム)</p>
         <p class="traffic">通信量: 0KB</p>
       </div>
       <div class="game" onclick='window.open("https://kurorosuke.github.io/atom_game/new_game/new_game.html", "_blank")'>
-        <p>おすすめ (ヒント機能あり)</p>
+        <p class="gameTitle">おすすめ (ヒント機能あり)</p>
         <p class="traffic">通信量: 0KB</p>
       </div>
       <div class="game" onclick='window.open("https://kurorosuke.github.io/atom_game/game/game.html", "_blank")'>
-        <p>対人 (オフライン表示)</p>
+        <p class="gameTitle">対人 (オフライン表示)</p>
         <p class="traffic">通信量: 0KB</p>
       </div>
     </div>
     <div class="section">
       <h2>エレメント・バトル</h2>
       <div class="game" onclick='window.open("https://kurorosuke.github.io/EB3/Code/game.html", "_blank")'>
-        <p>対CPU (アルゴリズム)</p>
+        <p class="gameTitle">対CPU (アルゴリズム)</p>
         <p class="traffic">通信量: 79.3KB / 211KB</p>
       </div>
       <div class="game" onclick='window.open("https://kurorosuke.github.io/EB3AI/Code/game.html", "_blank")'>
-        <p>対AI (推論利用)</p>
+        <p class="gameTitle">対AI (推論利用)</p>
         <p class="traffic">通信量: 772KB / 904KB</p>
       </div>
       <div class="game" onclick='window.open("https://kurorosuke.github.io/EBO/Code/game_min.html", "_blank")'>
-        <p>対人 (オンライン, PeerJS)</p>
+        <p class="gameTitle">対人 (オンライン, PeerJS)</p>
         <p class="traffic">通信量: 109KB / 241KB</p>
       </div>
       <div class="game" onclick='window.open("https://kurorosuke.github.io/LightEB3/Code/game_min.html", "_blank")'>
-        <p>対CPU (軽量版)</p>
+        <p class="gameTitle">対CPU (軽量版)</p>
         <p class="traffic">通信量: 47.8KB</p>
       </div>
     </div>
