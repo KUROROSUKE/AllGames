@@ -50,6 +50,16 @@
       padding: 2px 4px;
       border-radius: 3px;
     }
+    /* 画面幅が540px未満の場合、コンテナを上下配置に変更 */
+    @media (max-width: 540px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .section {
+        width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
