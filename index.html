@@ -60,6 +60,15 @@
   </style>
 </head>
 <body>
+  <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('https://kurorosuke.github.io/PEB3AI/sw.js')
+            .then(reg => console.log('Service Worker registered:', reg.scope))
+            .catch(err => console.error('Service Worker registration failed:', err));
+        });
+      }
+  </script>
   <h1>作成したゲーム一覧</h1>
   <div class="container">
     <div class="section">
